@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Headers;
+using System.Text;
 
 namespace AssignmentFive
 {
@@ -9,26 +10,40 @@ namespace AssignmentFive
             #region . Write a program that prints an identity matrix using for loop, in other words takes a value n from the user and shows the identity table of size n * n.
 
 
-            //Console.Write("Enter the size of the identity matrix (n): ");
-            // int.TryParse(Console.ReadLine(),out int n);
-
-
-            //for (int i = 0; i < n; i++)
+            //Console.WriteLine("Enter Your matrix  row n");
+            //int.TryParse(Console.ReadLine(), out int nrow);
+            //Console.WriteLine("Enter Your matrix  col n");
+            //int.TryParse(Console.ReadLine(), out int nCol);
+            //int[,] arr = new int[nrow, nCol];
+            //for (int i = 0; i < nrow; i++)
             //{
-            //    for (int j = 0; j < n; j++)
+
+            //    for (int j = 0; j < nCol; j++)
             //    {
             //        if (i == j)
-            //        {
-            //            Console.Write("1 "); 
-            //        }
+            //            arr[i, j] = 1;
             //        else
-            //        {
-            //            Console.Write("0 ");
-            //        }
+            //            arr[i, j] = 0;
+
+
             //    }
-            //    Console.WriteLine(); 
+
             //}
 
+            //Console.WriteLine(arr.Length);
+            //// print element of array
+            //for (int i = 0; i < nrow; i++)
+            //{
+
+            //    for (int j = 0; j < nCol; j++)
+            //    {
+
+            //        Console.Write(arr[i, j]);
+
+
+            //    }
+            //    Console.WriteLine();
+            //}
 
             #endregion
 
@@ -48,49 +63,31 @@ namespace AssignmentFive
 
             #region  Write a program in C# Sharp to merge two arrays of the same size sorted in ascending order.
 
-            //int[] firstArray = new int[3] { 300, 100, 200 };
-            //int[] secondArray = new int[3] { 5, 10, 2 };
-            //int[] resultmerage = new int[6];
-            //int i = 0,j=0;
-            //// copy first array
-            //for ( i = 0; i < firstArray.Length; i++)
-            //{
-
-            //    resultmerage[i] = firstArray[i];
-
-            //}
-
-            //// copy second array
-            //for ( j = 0; j < secondArray.Length; j++)
-            //{
-            //    resultmerage[i] = secondArray[j];
-            //    i++;
-            //}
-
-            //// sort array using bubble sort 
+            int[] arr1 = { 100, 20, 50, 800 };
+            int[] arr2 = { 8, 1, 10, 2 };
+            int[] arr3 = new int[8];
+            int i = 0;
+            for (i = 0; i < arr1.Length; i++)
+            {
+                arr3[i] = arr1[i]; 
+            }
 
 
-            //// Sort the merged array in ascending order using bubble sort algorithm
-            //for (i = 0; i <resultmerage.Length; i++)
-            //{
-            //    for ( int k = 0; k < resultmerage.Length - 1; k++)
-            //    {
-            //        if (resultmerage[k] >= resultmerage[k + 1])
-            //        {
-            //            j = resultmerage[k + 1];
-            //            resultmerage[k + 1] = resultmerage[k];
-            //            resultmerage[k] = j;
-            //        }
-            //    }
-            //}
 
-            //// print final array after megrage
-            //for ( i = 0; i < resultmerage.Length; i++)
-            //{
+            for (int j = 0; j < arr2.Length; j++)
+            {
 
-            //    Console.WriteLine(resultmerage[i]);
-            //}
+                arr3[i] = arr2[j];
+                i++;
+            }
 
+            Array.Sort(arr3);
+
+            for (int j = 0; j < arr3.Length; j++)
+            {
+
+                Console.WriteLine(arr3[j]);
+            }
 
 
             #endregion
@@ -219,41 +216,41 @@ namespace AssignmentFive
 
             #region Consider an Array of Integer values with size N, having values as ---
 
-        
-      
-       
-                //Console.Write("Enter the number of elements in the array: ");
-                // int.TryParse(Console.ReadLine(),out int n);
 
-                //int[] array = new int[n];
 
-          
-                //Console.WriteLine("Enter the elements of the array:");
-                //for (int i = 0; i < n; i++)
-                //{
-                //    Console.Write($"Element [{i + 1}]: ");
-                //   int.TryParse(Console.ReadLine(), out array[i]);
-                //}
 
-                //int maxDistance = 0;
+            //Console.Write("Enter the number of elements in the array: ");
+            // int.TryParse(Console.ReadLine(),out int n);
 
-                //for (int i = 0; i < n; i++)
-                //{
-                //    for (int j = i + 1; j < n; j++)
-                //    {
-                //        if (array[i] == array[j])
-                //        {
-                //            int distance = j - i;
-                //            if (distance > maxDistance)
-                //            {
-                //                maxDistance = distance;
-                //            }
-                //        }
-                //    }
-                //}
+            //int[] array = new int[n];
 
-                //Console.WriteLine($"The longest distance between two equal cells is: {maxDistance}");
-            
+
+            //Console.WriteLine("Enter the elements of the array:");
+            //for (int i = 0; i < n; i++)
+            //{
+            //    Console.Write($"Element [{i + 1}]: ");
+            //   int.TryParse(Console.ReadLine(), out array[i]);
+            //}
+
+            //int maxDistance = 0;
+
+            //for (int i = 0; i < n; i++)
+            //{
+            //    for (int j = i + 1; j < n; j++)
+            //    {
+            //        if (array[i] == array[j])
+            //        {
+            //            int distance = j - i;
+            //            if (distance > maxDistance)
+            //            {
+            //                maxDistance = distance;
+            //            }
+            //        }
+            //    }
+            //}
+
+            //Console.WriteLine($"The longest distance between two equal cells is: {maxDistance}");
+
 
             #endregion
 
@@ -334,6 +331,10 @@ namespace AssignmentFive
             //Console.WriteLine();
 
             #endregion
+
+
+
+
         }
 
 
